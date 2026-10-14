@@ -1,0 +1,32 @@
+{
+  "name": "url-shorting",
+  "version": "1.0.0",
+  "private": true,
+  "description": "url shorting app",
+  "homepage": "https://github.com/Ahmed-let-front/url-shortening#readme",
+  "bugs": {
+    "url": "https://github.com/Ahmed-let-front/url-shortening/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmed-let-front/url-shortening.git"
+  },
+  "license": "ISC",
+  "author": "ahmed-yasser",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "gh-pages": "^6.1.1",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  }
+}

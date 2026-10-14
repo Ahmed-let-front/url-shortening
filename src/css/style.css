@@ -1,7 +1,92 @@
-@import "tailwindcss";
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/700.css';
+@import 'tailwindcss';
+
 @theme {
+  --color-white: hsl(0, 0%, 100%);
+  --color-surface: hsl(240, 20%, 95%);
+  --color-cyan: hsl(180, 66%, 49%);
+  --color-cyan-light: hsl(180, 66%, 75%);
+  --color-violet: hsl(257, 27%, 26%);
+  --color-red: hsl(0, 87%, 67%);
+  --color-gray: hsl(0, 0%, 75%);
+  --color-grayish-violet: hsl(257, 7%, 63%);
+  --color-ink: hsl(255, 11%, 22%);
+  --color-midnight: hsl(260, 8%, 14%);
+
+  --font-sans: 'Poppins', sans-serif;
+
+  --container-site: 69.375rem;
 }
+
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply overflow-x-hidden bg-white font-medium text-ink antialiased;
+  }
 }
+
 @layer components {
+  .container-site {
+    @apply mx-auto box-content max-w-site px-6;
+  }
+
+  .btn {
+    @apply cursor-pointer bg-cyan font-bold text-white transition-colors hover:bg-cyan-light data-copied:bg-violet;
+  }
+
+  .nav-link {
+    @apply text-sm font-bold text-white transition-colors hover:text-cyan lg:text-grayish-violet lg:hover:text-ink;
+  }
+
+  .section-title {
+    @apply text-[1.75rem] font-bold tracking-tight lg:text-[2.5rem];
+  }
+
+  .link-row {
+    @apply flex flex-col rounded-md bg-white lg:flex-row lg:items-center lg:justify-between lg:px-8 lg:py-4;
+  }
+
+  .link-original {
+    @apply truncate border-b border-gray/50 px-4 py-3 text-ink lg:border-0 lg:p-0 lg:text-lg;
+  }
+
+  .link-actions {
+    @apply flex flex-col gap-3 p-4 lg:flex-row lg:items-center lg:gap-6 lg:p-0;
+  }
+
+  .feature-card {
+    @apply relative z-10 rounded-md bg-white px-8 pt-20 pb-8 text-center lg:text-left;
+  }
+
+  .feature-icon {
+    @apply absolute -top-11 left-1/2 flex size-22 -translate-x-1/2 items-center justify-center rounded-full bg-violet lg:left-8 lg:translate-x-0;
+  }
+
+  .feature-title {
+    @apply text-[1.375rem] font-bold text-ink;
+  }
+
+  .feature-text {
+    @apply mt-3 text-[0.9375rem] leading-relaxed text-grayish-violet;
+  }
+
+  .footer-title {
+    @apply font-bold text-white;
+  }
+
+  .footer-list {
+    @apply mt-4 flex flex-col gap-2.5;
+  }
+
+  .footer-link {
+    @apply text-sm text-gray transition-colors hover:text-cyan;
+  }
+
+  .social-icon {
+    @apply block size-6 bg-current text-white mask-contain mask-center mask-no-repeat transition-colors hover:text-cyan;
+  }
 }

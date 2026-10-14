@@ -2,15 +2,253 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta
       name="description"
       content="A modern and responsive URL shortening API landing page built with Vite, Tailwind CSS, and JavaScript. Shorten your links and track statistics seamlessly."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="src/js/main.js"></script>
     <title>Frontend Mentor | Shortly URL shortening API landing page</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="container-site relative flex items-center py-8 lg:py-12">
+      <a href="#" class="shrink-0">
+        <img
+          src="/src/assets/images/logo.svg"
+          alt="Shortly"
+          class="h-8 w-auto"
+        />
+      </a>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="menu"
+        class="ml-auto cursor-pointer text-grayish-violet lg:hidden"
+      >
+        <svg
+          width="24"
+          height="18"
+          viewBox="0 0 24 18"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <rect width="24" height="2" />
+          <rect y="8" width="24" height="2" />
+          <rect y="16" width="24" height="2" />
+        </svg>
+      </button>
+
+      <div
+        id="menu"
+        class="absolute inset-x-6 top-24 z-20 hidden flex-col items-center gap-6 rounded-lg bg-violet p-8 lg:static lg:ml-10 lg:flex lg:flex-1 lg:flex-row lg:justify-between lg:bg-transparent lg:p-0"
+      >
+        <nav class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8">
+          <a href="#" class="nav-link">Features</a>
+          <a href="#" class="nav-link">Pricing</a>
+          <a href="#" class="nav-link">Resources</a>
+        </nav>
+        <div
+          class="flex w-full flex-col items-center gap-6 border-t border-grayish-violet/50 pt-6 lg:w-auto lg:flex-row lg:gap-8 lg:border-0 lg:pt-0"
+        >
+          <a href="#" class="nav-link">Login</a>
+          <a
+            href="#"
+            class="btn w-full rounded-full px-6 py-2.5 text-center text-sm lg:w-auto"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="container-site flex flex-col-reverse items-center gap-8 pb-16 lg:flex-row lg:justify-between lg:pb-24"
+      >
+        <div class="text-center lg:w-5/12 lg:text-left">
+          <h1
+            class="text-[2.625rem] leading-tight font-bold tracking-tight text-ink lg:text-[5rem] lg:leading-[1.05]"
+          >
+            More than just shorter links
+          </h1>
+          <p
+            class="mt-3 text-lg text-grayish-violet lg:mt-2 lg:text-[1.375rem]"
+          >
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <a
+            href="#"
+            class="btn mt-6 inline-block rounded-full px-9 py-3.5 text-lg lg:mt-8"
+            >Get Started</a
+          >
+        </div>
+        <img
+          src="/src/assets/images/illustration-working.svg"
+          alt=""
+          class="w-[115%] max-w-none translate-x-[8%] self-end lg:w-[55%] lg:translate-x-0 lg:self-auto lg:-mr-[calc((100vw-100%)/2)]"
+        />
+      </section>
+
+      <section class="bg-linear-to-b from-white from-50% to-surface to-50%">
+        <div class="container-site">
+          <form
+            id="shorten-form"
+            novalidate
+            class="flex flex-col gap-4 rounded-lg bg-violet bg-[url('/src/assets/images/bg-shorten-mobile.svg')] bg-cover bg-center p-6 lg:flex-row lg:items-start lg:gap-6 lg:bg-[url('/src/assets/images/bg-shorten-desktop.svg')] lg:px-16 lg:py-10"
+          >
+            <div class="flex-1">
+              <input
+                id="url"
+                name="url"
+                type="text"
+                aria-label="Link to shorten"
+                placeholder="Shorten a link here..."
+                class="w-full rounded-md border-2 border-transparent bg-white px-6 py-3 text-lg text-ink placeholder:text-grayish-violet aria-invalid:border-red aria-invalid:placeholder:text-red/60 lg:py-3.5"
+              />
+              <p id="error" hidden class="mt-2 text-sm text-red italic"></p>
+            </div>
+            <button
+              type="submit"
+              class="btn rounded-md px-10 py-3.5 text-lg disabled:opacity-60"
+            >
+              Shorten It!
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="bg-surface pt-6 pb-24 lg:pb-32">
+        <ul id="links" class="container-site flex flex-col gap-4"></ul>
+
+        <div class="container-site mt-20 text-center lg:mt-28">
+          <h2 class="section-title text-ink">Advanced Statistics</h2>
+          <p class="mx-auto mt-4 max-w-md text-grayish-violet">
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </div>
+
+        <div
+          class="container-site relative mt-24 grid gap-y-24 before:absolute before:top-0 before:left-1/2 before:h-full before:w-2 before:-translate-x-1/2 before:bg-cyan lg:mt-28 lg:grid-cols-3 lg:items-start lg:gap-x-7.5 lg:gap-y-0 lg:before:top-39 lg:before:left-6 lg:before:h-2 lg:before:w-[calc(100%-3rem)] lg:before:translate-x-0"
+        >
+          <article class="feature-card">
+            <span class="feature-icon">
+              <img src="/src/assets/images/icon-brand-recognition.svg" alt="" />
+            </span>
+            <h3 class="feature-title">Brand Recognition</h3>
+            <p class="feature-text">
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </article>
+
+          <article class="feature-card lg:mt-11">
+            <span class="feature-icon">
+              <img src="/src/assets/images/icon-detailed-records.svg" alt="" />
+            </span>
+            <h3 class="feature-title">Detailed Records</h3>
+            <p class="feature-text">
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </article>
+
+          <article class="feature-card lg:mt-22">
+            <span class="feature-icon">
+              <img
+                src="/src/assets/images/icon-fully-customizable.svg"
+                alt=""
+              />
+            </span>
+            <h3 class="feature-title">Fully Customizable</h3>
+            <p class="feature-text">
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="bg-violet bg-[url('/src/assets/images/bg-boost-mobile.svg')] bg-cover bg-center py-20 text-center lg:bg-[url('/src/assets/images/bg-boost-desktop.svg')] lg:py-14"
+      >
+        <h2 class="section-title text-white">Boost your links today</h2>
+        <a
+          href="#"
+          class="btn mt-6 inline-block rounded-full px-9 py-3.5 text-lg"
+          >Get Started</a
+        >
+      </section>
+    </main>
+
+    <footer class="bg-midnight py-16">
+      <div
+        class="container-site flex flex-col items-center gap-10 text-center lg:flex-row lg:items-start lg:justify-between lg:text-left"
+      >
+        <a href="#" class="lg:w-56">
+          <img
+            src="/src/assets/images/logo.svg"
+            alt="Shortly"
+            class="h-8 w-auto brightness-0 invert"
+          />
+        </a>
+
+        <div class="flex flex-col gap-10 lg:flex-row lg:gap-20">
+          <div>
+            <h3 class="footer-title">Features</h3>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Link Shortening</a></li>
+              <li><a href="#" class="footer-link">Branded Links</a></li>
+              <li><a href="#" class="footer-link">Analytics</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Resources</h3>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Blog</a></li>
+              <li><a href="#" class="footer-link">Developers</a></li>
+              <li><a href="#" class="footer-link">Support</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Company</h3>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">About</a></li>
+              <li><a href="#" class="footer-link">Our Team</a></li>
+              <li><a href="#" class="footer-link">Careers</a></li>
+              <li><a href="#" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <a
+            href="#"
+            aria-label="Facebook"
+            class="social-icon mask-[url(/src/assets/images/icon-facebook.svg)]"
+          ></a>
+          <a
+            href="#"
+            aria-label="Twitter"
+            class="social-icon mask-[url(/src/assets/images/icon-twitter.svg)]"
+          ></a>
+          <a
+            href="#"
+            aria-label="Pinterest"
+            class="social-icon mask-[url(/src/assets/images/icon-pinterest.svg)]"
+          ></a>
+          <a
+            href="#"
+            aria-label="Instagram"
+            class="social-icon mask-[url(/src/assets/images/icon-instagram.svg)]"
+          ></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

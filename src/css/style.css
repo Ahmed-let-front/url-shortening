@@ -1,16 +1,18 @@
+@import 'tailwindcss';
 @import '@fontsource/poppins/500.css';
 @import '@fontsource/poppins/700.css';
-@import 'tailwindcss';
+
+@custom-variant hover (&:hover);
 
 @theme {
-  --color-white: hsl(0, 0%, 100%);
+  --color-white: hsl(0, 0%, 90%);
   --color-surface: hsl(240, 20%, 95%);
-  --color-cyan: hsl(180, 66%, 49%);
+  --color-cyan: hsl(180, 66%, 50%);
   --color-cyan-light: hsl(180, 66%, 75%);
   --color-violet: hsl(257, 27%, 26%);
   --color-red: hsl(0, 87%, 67%);
   --color-gray: hsl(0, 0%, 75%);
-  --color-grayish-violet: hsl(257, 7%, 63%);
+  --color-grayish-violet: hsl(257, 7%, 40%);
   --color-ink: hsl(255, 11%, 22%);
   --color-midnight: hsl(260, 8%, 14%);
 
@@ -35,11 +37,11 @@
   }
 
   .btn {
-    @apply cursor-pointer bg-cyan font-bold text-white transition-colors hover:bg-cyan-light data-copied:bg-violet;
+    @apply cursor-pointer bg-cyan font-bold text-violet transition-colors hover:bg-cyan-light data-copied:bg-violet data-copied:text-white;
   }
 
   .nav-link {
-    @apply text-sm font-bold text-white transition-colors hover:text-cyan lg:text-grayish-violet lg:hover:text-ink;
+    @apply text-sm font-bold text-grayish-violet hover:text-ink;
   }
 
   .section-title {

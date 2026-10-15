@@ -11,48 +11,38 @@
     <title>Frontend Mentor | Shortly URL shortening API landing page</title>
   </head>
   <body>
-    <header class="container-site relative flex items-center py-8 lg:py-12">
-      <a href="#" class="shrink-0">
-        <img
-          src="/src/assets/images/logo.svg"
-          alt="Shortly"
-          class="h-8 w-auto"
-        />
+    <header
+      class="container-site relative flex items-center gap-6 py-8 lg:py-12"
+    >
+      <a href="#" class="shrink-0" aria-label="home icon">
+        <img src="/src/assets/images/logo.svg" class="h-8 w-auto" alt="" />
       </a>
-
       <button
         id="menu-toggle"
         type="button"
         aria-label="Toggle menu"
-        aria-expanded="false"
-        aria-controls="menu"
-        class="ml-auto cursor-pointer text-grayish-violet lg:hidden"
+        popovertarget="mobile-menu"
+        popovertargetaction="toggle"
+        aria-controls="mobile-menu"
+        class="ml-auto cursor-pointer text-grayish-violet md:hidden"
       >
-        <svg
-          width="24"
-          height="18"
-          viewBox="0 0 24 18"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <rect width="24" height="2" />
-          <rect y="8" width="24" height="2" />
-          <rect y="16" width="24" height="2" />
-        </svg>
+        <img src="/src/assets/images/menu-icon.svg" alt="" />
       </button>
 
-      <div
-        id="menu"
-        class="absolute inset-x-6 top-24 z-20 hidden flex-col items-center gap-6 rounded-lg bg-violet p-8 lg:static lg:ml-10 lg:flex lg:flex-1 lg:flex-row lg:justify-between lg:bg-transparent lg:p-0"
+      <nav
+        id="menu-desktop"
+        aria-label="Desktop Navigation"
+        class="w-full hidden justify-between items-center md:flex"
       >
-        <nav class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8">
-          <a href="#" class="nav-link">Features</a>
-          <a href="#" class="nav-link">Pricing</a>
-          <a href="#" class="nav-link">Resources</a>
-        </nav>
-        <div
-          class="flex w-full flex-col items-center gap-6 border-t border-grayish-violet/50 pt-6 lg:w-auto lg:flex-row lg:gap-8 lg:border-0 lg:pt-0"
-        >
+        <ul class="flex items-center gap-6 lg:flex-row lg:gap-8">
+          <li><a href="#" class="nav-link">Features</a></li>
+          <li><a href="#" class="nav-link">Pricing</a></li>
+          <li>
+            <a href="#" class="nav-link">Resources</a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-8">
           <a href="#" class="nav-link">Login</a>
           <a
             href="#"
@@ -60,16 +50,16 @@
             >Sign Up</a
           >
         </div>
-      </div>
+      </nav>
     </header>
 
     <main>
       <section
-        class="container-site flex flex-col-reverse items-center gap-8 pb-16 lg:flex-row lg:justify-between lg:pb-24"
+        class="container-site flex flex-col-reverse items-center gap-12 pb-16 lg:flex-row lg:justify-between lg:pb-24"
       >
         <div class="text-center lg:w-5/12 lg:text-left">
           <h1
-            class="text-[2.625rem] leading-tight font-bold tracking-tight text-ink lg:text-[5rem] lg:leading-[1.05]"
+            class="text-[2.6rem] leading-tight font-bold tracking-tight text-ink lg:text-6xl lg:leading-[1.05]"
           >
             More than just shorter links
           </h1>
@@ -88,7 +78,7 @@
         <img
           src="/src/assets/images/illustration-working.svg"
           alt=""
-          class="w-[115%] max-w-none translate-x-[8%] self-end lg:w-[55%] lg:translate-x-0 lg:self-auto lg:-mr-[calc((100vw-100%)/2)]"
+          class="w-full md:w-[70%] max-w-none lg:w-[55%]"
         />
       </section>
 
@@ -202,26 +192,46 @@
           <div>
             <h3 class="footer-title">Features</h3>
             <ul class="footer-list">
-              <li><a href="#" class="footer-link">Link Shortening</a></li>
-              <li><a href="#" class="footer-link">Branded Links</a></li>
-              <li><a href="#" class="footer-link">Analytics</a></li>
+              <li>
+                <a href="#" class="footer-link">Link Shortening</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Branded Links</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Analytics</a>
+              </li>
             </ul>
           </div>
           <div>
             <h3 class="footer-title">Resources</h3>
             <ul class="footer-list">
-              <li><a href="#" class="footer-link">Blog</a></li>
-              <li><a href="#" class="footer-link">Developers</a></li>
-              <li><a href="#" class="footer-link">Support</a></li>
+              <li>
+                <a href="#" class="footer-link">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Developers</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Support</a>
+              </li>
             </ul>
           </div>
           <div>
             <h3 class="footer-title">Company</h3>
             <ul class="footer-list">
-              <li><a href="#" class="footer-link">About</a></li>
-              <li><a href="#" class="footer-link">Our Team</a></li>
-              <li><a href="#" class="footer-link">Careers</a></li>
-              <li><a href="#" class="footer-link">Contact</a></li>
+              <li>
+                <a href="#" class="footer-link">About</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Our Team</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Careers</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Contact</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -250,5 +260,28 @@
         </div>
       </div>
     </footer>
+    <dialog
+      id="mobile-menu"
+      popover
+      class="m-auto w-[calc(100%-3rem)] rounded-xl bg-violet p-6 text-white backdrop:bg-black/50 starting:open:opacity-0 starting:open:-translate-y-20 duration-500 opacity-0 -translate-y-20 open:opacity-100 open:translate-y-0 transition-discrete lg:hidden"
+    >
+      <nav aria-label="Mobile Navigation" class="flex flex-col gap-4">
+        <ul
+          class="flex flex-col items-center gap-8 text-center text-lg font-bold border-b pb-5 border-b-grayish-violet/30"
+        >
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+        <div
+          class="flex flex-col items-center gap-4 text-center text-lg font-bold"
+        >
+          <a href="#">Login</a>
+          <a href="#" class="btn w-full rounded-full py-3 text-center"
+            >Sign Up</a
+          >
+        </div>
+      </nav>
+    </dialog>
   </body>
 </html>

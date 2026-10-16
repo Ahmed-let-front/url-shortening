@@ -8,6 +8,7 @@ const elements = {
   shortenedLinksContainer: document.getElementById('shortened-links-container'),
   notificationsList: document.getElementById('notifications-list'),
   copyBtn: document.getElementById('copyBtn'),
+  fakeLinkDialog: document.getElementById('fake-link-dialog'),
 };
 
 const config = {
@@ -141,7 +142,6 @@ const copyToClipboard = async textToCopy => {
     return;
   }
   try {
-
     await navigator.clipboard.writeText(textToCopy);
     showPopup('✔', 'Copied to clipboard!');
   } catch (err) {
@@ -153,8 +153,17 @@ const handleCopyBtn = () => {
     copyToClipboard(state.shortUrl),
   );
 };
+const handleDialogFakeLink = () => {
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.demo-btn');
+    if (!btn) return;
+    e.preventDefault();
+    elements.fakeLinkDialog.showPopover();
+  });
+};
 const init = () => {
   handleCopyBtn();
   handleShortenForm();
+  handleDialogFakeLink();
 };
 init();

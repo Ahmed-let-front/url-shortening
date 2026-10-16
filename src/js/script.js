@@ -100,10 +100,10 @@ const shortenUrl = async longURL => {
   state.originalURL = originalUrlFromData;
 };
 const hiddenShortURLContainer = () => {
-  elements.shortenedLinksContainer.setAttribute('aria-hidden', true);
+  elements.shortenedLinksContainer.inert = true;
 };
 const showShortURLContainer = () => {
-  elements.shortenedLinksContainer.setAttribute('aria-hidden', false);
+  elements.shortenedLinksContainer.inert = false;
 };
 const updateShortUrlEl = () => {
   showShortURLContainer();
@@ -119,10 +119,10 @@ const showPopup = (sign, msg) => {
   const li = document.createElement('li');
   li.setAttribute('role', 'status');
   li.className =
-    'bg-midnight text-white px-6 py-3 rounded-lg shadow-xl flex items-center gap-3 border-l-4 border-cyan transform  starting:translate-x-30 starting:opacity-0 transition-all duration-500 translate-x-0 opacity-100 transition-discrete';
+    'bg-midnight text-white text-[0.7rem] md:text-sm px-6 py-3 rounded-lg shadow-xl flex items-center gap-3 border-l-4 border-cyan transform  starting:translate-x-30 starting:opacity-0 transition-all duration-500 translate-x-0 opacity-100 transition-discrete';
   li.innerHTML = `
     <span>${sign}</span>
-    <p class="text-sm font-medium">${msg}</p>
+    <p class="font-medium">${msg}</p>
   `;
   elements.notificationsList.append(li);
   closePopup(li);

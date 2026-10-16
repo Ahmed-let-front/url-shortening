@@ -91,4 +91,49 @@
   .social-icon {
     @apply block size-6 bg-current text-white mask-contain mask-center mask-no-repeat transition-colors hover:text-cyan;
   }
+  .before-observer-up {
+    @apply opacity-0 duration-700 translate-y-40;
+  }
+  .hero-init-animateDown {
+    @apply animate-[fromY_0.7s_forwards];
+  }
+  .hero-init-animateRight {
+    @apply animate-[toRight_0.7s_forwards];
+  }
+  .hero-init-animateLeft {
+    @apply animate-[toLeft_0.7s_forwards];
+  }
 }
+
+@keyframes fromY {
+  from {
+    opacity: 0;
+    transform: translateY(-160px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(160px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes toLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-160px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+

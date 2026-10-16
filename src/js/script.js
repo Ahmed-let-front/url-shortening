@@ -9,6 +9,7 @@ const elements = {
   notificationsList: document.getElementById('notifications-list'),
   copyBtn: document.getElementById('copyBtn'),
   fakeLinkDialog: document.getElementById('fake-link-dialog'),
+  allObservElements: document.querySelectorAll('.before-observer-up'),
 };
 
 const config = {
@@ -50,6 +51,23 @@ const AJAX = async (apiUrl, longURL) => {
   if (!res.ok) throw new Error('Something Went Error');
   const data = await res.json();
   return data;
+};
+const handleObservervUp = () => {
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2,
+  };
+  const callBack = (entries, observ) => {
+    entries.forEach(entry => {
+      if (!entry.intersectionRatio) return;
+      const targetEl = entry.target;
+      targetEl.classList.add('opacity-100', 'translate-y-0');
+      observ.unobserve(targetEl);
+    });
+  };
+  const observer = new IntersectionObserver(callBack, options);
+  elements.allObservElements.forEach(el => observer.observe(el));
 };
 const checkValidData = () => {
   if (!elements.urlInput.value.trim() || !elements.urlInput.checkValidity()) {
@@ -162,6 +180,7 @@ const handleDialogFakeLink = () => {
   });
 };
 const init = () => {
+  handleObservervUp();
   handleCopyBtn();
   handleShortenForm();
   handleDialogFakeLink();

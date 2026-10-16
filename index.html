@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/url-shortening/favicon.png" type="image/png">
+    <meta
+      name="description"
+      content="A modern and responsive URL shortening API landing page built with Vite, Tailwind CSS, and JavaScript. Shorten your links and track statistics seamlessly."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Shortly URL shortening API landing page</title>
+    <script type="module" crossorigin src="/url-shortening/assets/index-B1P-jWY_.js"></script>
+    <link rel="stylesheet" crossorigin href="/url-shortening/assets/index-CJRqrG3e.css">
+  </head>
+  <body>
+    <header
+      class="container-site relative flex items-center gap-6 py-8 md:py-12 hero-init-animateDown"
+    >
+      <a href="#" class="shrink-0" aria-label="home icon">
+        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='121'%20height='33'%3e%3cpath%20fill='%2334313D'%20d='M16.715%207.932c-.068-.09-.306-.26-.714-.51s-.918-.51-1.53-.782-1.281-.51-2.006-.714a8.005%208.005%200%2000-2.176-.306c-1.995%200-2.992.669-2.992%202.006%200%20.408.107.748.323%201.02.215.272.532.516.952.731.419.215.946.414%201.58.595l1.406.393.805.219c1.156.317%202.198.663%203.128%201.037.929.374%201.717.839%202.363%201.394a5.647%205.647%200%20011.496%202.023c.35.793.527%201.745.527%202.856%200%201.36-.255%202.51-.765%203.451-.51.94-1.185%201.7-2.023%202.278-.84.578-1.802.997-2.89%201.258-1.088.26-2.21.391-3.366.391a19.68%2019.68%200%2001-5.44-.799c-.884-.26-1.74-.572-2.567-.935A14.358%2014.358%200%2001.53%2022.28l2.448-4.862c.09.113.385.329.884.646.498.317%201.116.635%201.853.952.736.317%201.558.6%202.465.85.906.25%201.824.374%202.754.374%201.972%200%202.958-.6%202.958-1.802%200-.453-.148-.827-.442-1.122-.295-.295-.703-.561-1.224-.799a12.455%2012.455%200%2000-1.504-.56l-1.702-.495-.976-.288c-1.111-.34-2.074-.708-2.89-1.105-.816-.397-1.49-.856-2.023-1.377a5.003%205.003%200%2001-1.19-1.802c-.261-.68-.391-1.473-.391-2.38%200-1.27.238-2.391.714-3.366a7.266%207.266%200%20011.938-2.465%208.435%208.435%200%20012.839-1.513c1.076-.34%202.215-.51%203.417-.51.838%200%201.666.08%202.482.238.816.159%201.598.363%202.346.612.748.25%201.445.533%202.09.85.647.317%201.242.635%201.786.952l-2.448%204.624zM40.139%2025h-5.44V14.97c0-1.156-.227-2.006-.68-2.55-.454-.544-1.077-.816-1.87-.816-.318%200-.663.074-1.037.221a4.173%204.173%200%2000-1.088.646%205.827%205.827%200%2000-.97%201.003%204.4%204.4%200%2000-.68%201.292V25h-5.44V.18h5.44v9.962a6.786%206.786%200%20012.602-2.465c1.076-.578%202.26-.867%203.553-.867%201.201%200%202.17.21%202.907.629.736.42%201.303.952%201.7%201.598.396.646.663%201.371.799%202.176.136.805.204%201.592.204%202.363V25zm12.34.34c-1.519%200-2.873-.25-4.063-.748-1.19-.499-2.193-1.173-3.01-2.023a8.54%208.54%200%2001-1.852-2.958%209.97%209.97%200%2001-.63-3.519c0-1.224.21-2.397.63-3.519a8.54%208.54%200%20011.853-2.958c.816-.85%201.819-1.53%203.009-2.04s2.544-.765%204.063-.765c1.519%200%202.867.255%204.046.765%201.179.51%202.176%201.19%202.992%202.04a8.754%208.754%200%20011.87%202.958%209.736%209.736%200%2001.646%203.519%209.97%209.97%200%2001-.63%203.519%208.54%208.54%200%2001-1.852%202.958c-.816.85-1.82%201.524-3.01%202.023-1.19.499-2.543.748-4.062.748zM48.5%2016.092c0%201.405.374%202.533%201.122%203.383.748.85%201.7%201.275%202.856%201.275a3.59%203.59%200%20001.564-.34c.476-.227.89-.544%201.24-.952a4.57%204.57%200%2000.834-1.479%205.632%205.632%200%2000.306-1.887c0-1.405-.374-2.533-1.122-3.383-.748-.85-1.689-1.275-2.822-1.275a3.702%203.702%200%2000-2.84%201.292%204.57%204.57%200%2000-.832%201.479%205.632%205.632%200%2000-.306%201.887zm27.776-4.284c-1.315.023-2.505.238-3.57.646-1.065.408-1.836%201.02-2.312%201.836V25h-5.44V7.15h4.998v3.604c.612-1.201%201.4-2.142%202.363-2.822.963-.68%201.989-1.031%203.077-1.054h.544c.113%200%20.227.011.34.034v4.896zm14.074%2012.24a21.71%2021.71%200%2001-2.567.884c-.963.272-1.932.408-2.907.408-.68%200-1.32-.085-1.92-.255a4.286%204.286%200%2001-1.582-.816c-.453-.374-.81-.867-1.07-1.479-.262-.612-.392-1.349-.392-2.21v-9.316h-2.278V7.15h2.278V1.472h5.44V7.15h3.638v4.114h-3.638v7.446c0%20.59.147%201.014.442%201.275.295.26.669.391%201.122.391.408%200%20.827-.068%201.258-.204.43-.136.805-.283%201.122-.442l1.054%204.318zM92.627.18h5.44v18.462c0%201.36.578%202.04%201.734%202.04.272%200%20.572-.04.901-.119.329-.08.63-.198.901-.357l.714%204.08c-.68.317-1.462.567-2.346.748-.884.181-1.711.272-2.482.272-1.564%200-2.765-.408-3.604-1.224-.839-.816-1.258-1.995-1.258-3.536V.18zm11.456%2027.506c.454.159.879.272%201.275.34a6.4%206.4%200%20001.071.102c.658%200%201.168-.227%201.53-.68.363-.453.692-1.27.986-2.448l-6.8-17.85h5.61l4.148%2013.192%203.57-13.192h5.1l-6.8%2020.74a7.106%207.106%200%2001-2.55%203.587c-1.224.918-2.674%201.377-4.352%201.377a8.17%208.17%200%2001-1.377-.119%207.516%207.516%200%2001-1.41-.391v-4.658z'/%3e%3c/svg%3e" class="h-8 w-auto" alt="" />
+      </a>
+      <button
+        id="menu-toggle"
+        type="button"
+        aria-label="Toggle menu"
+        popovertarget="mobile-menu"
+        popovertargetaction="toggle"
+        aria-controls="mobile-menu"
+        class="ml-auto cursor-pointer text-grayish-violet md:hidden"
+      >
+        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='black'%20aria-hidden='true'%20%3e%3crect%20width='24'%20height='2'%20/%3e%3crect%20y='8'%20width='24'%20height='2'%20/%3e%3crect%20y='16'%20width='24'%20height='2'%20/%3e%3c/svg%3e" alt="" />
+      </button>
+
+      <nav
+        id="menu-desktop"
+        aria-label="Desktop Navigation"
+        class="w-full hidden justify-between items-center md:flex"
+      >
+        <ul class="flex items-center gap-6 md:flex-row md:gap-8">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#" class="nav-link demo-btn">Pricing</a></li>
+          <li>
+            <a href="#resources" class="nav-link">Resources</a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-8">
+          <a href="#" class="nav-link demo-btn">Login</a>
+          <a
+            href="#"
+            class="btn w-full rounded-full px-6 py-2.5 text-center text-sm md:w-auto demo-btn"
+            >Sign Up</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="container-site flex flex-col-reverse items-center gap-12 pb-16 lg:flex-row md:justify-between md:pb-24"
+      >
+        <div class="text-center lg:text-left hero-init-animateLeft">
+          <h1
+            class="text-[2.6rem] leading-tight font-bold tracking-tight text-ink md:text-6xl md:leading-[1.05]"
+          >
+            More than just shorter links
+          </h1>
+          <p
+            class="mt-3 text-md text-grayish-violet md:mt-2 md:text-[1.375rem]"
+          >
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <a
+            href="#"
+            class="btn mt-6 inline-block rounded-full px-9 py-3.5 text-md md:mt-8 demo-btn"
+            >Get Started</a
+          >
+        </div>
+        <img
+          src="/url-shortening/assets/illustration-working-DTaLafQ1.svg"
+          alt=""
+          class="w-full max-w-none md:w-[55%] hero-init-animateRight"
+        />
+      </section>
+
+      <section
+        class="bg-linear-to-b from-white from-50% to-surface to-50 before-observer-up"
+        aria-label="Short Form"
+      >
+        <div class="container-site flex flex-col gap-6">
+          <form
+            id="shorten-form"
+            novalidate
+            class="flex flex-col gap-4 rounded-md bg-violet bg-[url('/src/assets/images/bg-shorten-mobile.svg')] bg-cover bg-center p-8 md:flex-row md:gap-6 md:bg-[url('/src/assets/images/bg-shorten-desktop.svg')] md:px-16 md:py-10"
+          >
+            <div class="flex-1 relative">
+              <input
+                id="urlInput"
+                name="url"
+                type="url"
+                required
+                aria-label="Link to shorten"
+                placeholder="Shorten a link here..."
+                aria-invalid="false"
+                class="w-full rounded-md border-2 border-transparent peer bg-white px-6 py-3 text-md text-ink placeholder:text-grayish-violet aria-invalid:border-red aria-invalid:placeholder:text-red/60 md:py-3.5"
+              />
+              <p
+                id="error-msg"
+                aria-hidden="true"
+                class="absolute scale-0 pointer-events-none peer-aria-invalid:scale-100 peer-aria-invalid:pointer-events-auto -top-5 md:-top-6 left-0 text-xs italic text-red md:-bottom-6 md:text-sm"
+              >
+                Please add a vaild link
+              </p>
+            </div>
+            <button
+              type="submit"
+              class="btn rounded-md px-10 py-3.5 text-md flex items-center justify-center"
+              id="btn-submit-short-form"
+            >
+              Shorten It!
+            </button>
+          </form>
+          <div
+            id="shortened-links-container"
+            aria-hidden="true"
+            class="translate-y-0 opacity-100 pointer-events-auto duration-700 aria-hidden:opacity-0 aria-hidden:-translate-y-12 aria-hidden:pointer-events-none"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-center justify-between bg-white rounded-lg p-4 md:px-6 md:py-4 shadow-sm gap-4"
+            >
+              <dl class="contents">
+                <div
+                  class="flex flex-col md:flex-row md:items-center gap-2 overflow-hidden"
+                >
+                  <dt class="sr-only">Original Link:</dt>
+                  <dd class="m-0 truncate max-w-full md:max-w-[400px]">
+                    <a
+                      href="#"
+                      class="text-grayish-violet duration-300 transition-colors hover:text-grayish-violet/50 font-medium"
+                      target="_blank"
+                      id="original-link"
+                    ></a>
+                  </dd>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center gap-4">
+                  <div class="flex items-center gap-2">
+                    <dt class="sr-only">Shortened Link:</dt>
+                    <dd class="m-0">
+                      <a
+                        href="#"
+                        target="_blank"
+                        id="short-link"
+                        class="text-midnight duration-300 transition-colors hover:text-midnight/50 font-medium"
+                      ></a>
+                    </dd>
+                  </div>
+                  <button
+                    type="button"
+                    id="copyBtn"
+                    class="btn rounded-md px-6 py-2.5 text-sm font-bold transition-all duration-300 w-full md:w-auto"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-surface pt-6 pb-24 md:pb-32" id="features">
+        <ul id="links" class="container-site flex flex-col gap-4"></ul>
+
+        <div
+          class="container-site mt-20 text-center md:mt-28 before-observer-up"
+        >
+          <h2 class="section-title text-ink">Advanced Statistics</h2>
+          <p class="mx-auto mt-4 max-w-md text-grayish-violet">
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </div>
+
+        <div
+          class="container-site relative mt-24 grid gap-y-24 before:absolute before:top-0 before:left-1/2 before:h-full before:w-2 before:-translate-x-1/2 before:bg-cyan md:mt-28 md:grid-cols-3 md:items-start md:gap-x-7.5 md:gap-y-0 md:before:top-39 md:before:left-6 md:before:h-2 md:before:w-[calc(100%-3rem)] md:before:translate-x-0"
+        >
+          <article class="feature-card before-observer-up">
+            <span class="feature-icon">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3e%3cpath%20fill='%232BD0D0'%20d='M36.406%2011.719c.648%200%201.172.524%201.172%201.172v24.765h1.25a1.172%201.172%200%20110%202.344H1.172a1.172%201.172%200%20110-2.344h1.25V24.61c0-.647.524-1.172%201.172-1.172H8.28c.648%200%201.172.525%201.172%201.172v13.047h2.344v-8.36c0-.646.524-1.171%201.172-1.171h4.687c.648%200%201.172.525%201.172%201.172v8.36h2.344V19.921c0-.647.524-1.172%201.172-1.172h4.687c.648%200%201.172.525%201.172%201.172v17.734h2.344V12.891c0-.648.524-1.172%201.172-1.172zm-1.172%202.344h-2.343v23.593h2.343V14.063zm-9.375%207.03h-2.343v16.563h2.343V21.094zm-9.375%209.376h-2.343v7.187h2.343V30.47zM7.11%2025.78H4.766v11.875h2.343V25.781zM34.062%200a3.52%203.52%200%20013.516%203.516%203.52%203.52%200%2001-3.516%203.515c-.72%200-1.389-.217-1.947-.59l-4.073%203.055a3.52%203.52%200%2001-3.355%204.567%203.496%203.496%200%2001-1.514-.344l-4.689%204.688c.22.459.344.973.344%201.515a3.52%203.52%200%2001-3.515%203.515%203.52%203.52%200%2001-3.488-3.949l-3.45-1.724a3.503%203.503%200%2001-2.438.986%203.52%203.52%200%2001-3.515-3.516%203.52%203.52%200%20013.515-3.515%203.52%203.52%200%20013.488%203.949l3.45%201.725a3.503%203.503%200%20013.952-.643l4.689-4.688a3.496%203.496%200%2001-.344-1.515%203.52%203.52%200%20013.515-3.516c.72%200%201.39.218%201.948.59l4.073-3.054A3.52%203.52%200%200134.063%200zm-18.75%2018.75c-.646%200-1.171.526-1.171%201.172%200%20.646.525%201.172%201.171%201.172.647%200%201.172-.526%201.172-1.172%200-.646-.525-1.172-1.172-1.172zm-9.374-4.688c-.647%200-1.172.526-1.172%201.172%200%20.646.525%201.172%201.171%201.172.647%200%201.172-.526%201.172-1.172%200-.646-.525-1.171-1.171-1.171zm18.75-4.687c-.647%200-1.172.526-1.172%201.172%200%20.646.525%201.172%201.172%201.172.646%200%201.171-.526%201.171-1.172%200-.646-.525-1.172-1.172-1.172zm9.375-7.031c-.647%200-1.172.526-1.172%201.172%200%20.646.525%201.171%201.172%201.171.646%200%201.171-.525%201.171-1.171s-.525-1.172-1.172-1.172z'/%3e%3c/svg%3e" alt="" />
+            </span>
+            <h3 class="feature-title">Brand Recognition</h3>
+            <p class="feature-text">
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </article>
+
+          <article class="feature-card md:mt-11 before-observer-up">
+            <span class="feature-icon">
+              <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='40'%20height='40'%3e%3cpath%20fill='%232BD0D0'%20d='M19.968%200c11.01%200%2019.969%208.958%2019.969%2019.968s-8.958%2019.969-19.969%2019.969C8.958%2039.937%200%2030.979%200%2019.968%200%208.958%208.958%200%2019.968%200zm7.805%2035.579c-4.863-2.402-10.746-2.402-15.609%200a17.339%2017.339%200%20007.804%201.862%2017.34%2017.34%200%20007.805-1.862zm-6.556-33.02V6.24H18.72V2.56a17.362%2017.362%200%2000-9.492%203.656l2.798%202.797-1.765%201.765L7.373%207.89a17.41%2017.41%200%2000-4.678%209.582h4.793v2.497H2.496c0%205.805%202.857%2010.943%207.227%2014.122%206.217-3.714%2014.274-3.714%2020.49%200%204.37-3.179%207.228-8.317%207.228-14.123h-4.992v-2.496h4.793a17.41%2017.41%200%2000-4.678-9.582l-2.888%202.888-1.765-1.765%202.798-2.797a17.362%2017.362%200%2000-9.492-3.657zm-2.437%208.292c.332-1.034%202.045-1.034%202.377%200%20.635%201.978%203.804%2011.955%203.804%2014.11a4.997%204.997%200%2001-4.993%204.992%204.997%204.997%200%2001-4.992-4.992c0-2.155%203.17-12.132%203.804-14.11zm1.188%204.567c-1.233%204.047-2.496%208.522-2.496%209.543a2.5%202.5%200%20002.496%202.496%202.5%202.5%200%20002.497-2.496c0-1.02-1.263-5.496-2.497-9.543z'/%3e%3c/svg%3e" alt="" />
+            </span>
+            <h3 class="feature-title">Detailed Records</h3>
+            <p class="feature-text">
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </article>
+
+          <article class="feature-card md:mt-22 before-observer-up">
+            <span class="feature-icon">
+              <img
+                src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%3e%3cpath%20fill='%232BD0D0'%20d='M46.608%206.02a.975.975%200%2000-.927-.047l-7.624%203.591a8.283%208.283%200%2000-4.728%206.837l-.196%202.436-3.95%206.561v-2.801c0-.01-.006-.017-.006-.027a.974.974%200%2000-.046-.284l-1.838-5.514%203.753-7.504a.984.984%200%2000-.099-1.03l-5.9-7.867a1.019%201.019%200%2000-1.573%200L17.573%208.24a.984.984%200%2000-.093%201.03l3.753%207.503-1.838%205.514a.974.974%200%2000-.047.284v3.951l-6.127-9.299c-.007-.01-.02-.017-.026-.026a.995.995%200%2000-.211-.215c-.02-.013-.036-.03-.056-.042-.02-.013-.022-.02-.035-.027l-3.605-2.085-1.497-2.271L5.628%209.27a.983.983%200%2000-1.147-.386L.654%2010.227a.983.983%200%2000-.491%201.468l2.705%204.107%201.492%202.27.492%204.137a.36.36%200%2000.01.04c.004.02.009.041.015.061a.973.973%200%2000.116.295c.007.01.007.023.014.033.007.01%2014.624%2022.165%2014.695%2022.225A4.87%204.87%200%200024.255%2048c.4%200%20.8-.05%201.19-.145a4.886%204.886%200%20003.028-2.235l13.08-21.698%202.065-1.307a8.343%208.343%200%20002.66-2.721%208.259%208.259%200%20001.18-4.651l-.383-8.42a.984.984%200%2000-.467-.803zm-7.122%2017.524l-1.522%202.527-5.054-3.048%201.524-2.527%205.052%203.048zM21.315%2038.446V23.58h5.9v5.08l-5.9%209.786zm1.693-20.766h2.515l1.31%203.933h-5.136l1.31-3.933zm1.257-6.885a.983.983%200%20110-1.966.983.983%200%20010%201.966zm0-8.194l4.75%206.331-3.39%206.78h-.377v-3.13a2.95%202.95%200%2010-1.966%200v3.13h-.376l-3.39-6.78%204.75-6.331zM10.53%2017.818l-.29.19-3.621%202.387-.333-2.787a.982.982%200%2000-.156-.424l-1.081-1.642L6.69%2014.46l1.081%201.642a.988.988%200%2000.329.31l2.429%201.406zm-6.122-6.826l1.2%201.822-1.642%201.082-1.475-2.232%201.917-.672zm5.249%209.755l2.458-1.624%207.233%2010.972v10.726L7.193%2022.371l2.464-1.624zm17.135%2023.851a2.95%202.95%200%2011-5.052-3.048l7.425-12.315h.017v-.027l2.712-4.499%202.527%201.526%202.53%201.52-10.16%2016.843zm17.807-25.724a6.353%206.353%200%2001-2.028%202.073l-1.747%201.107-2.852-1.717-2.852-1.717.162-2.065a6.318%206.318%200%20013.604-5.213L45.18%208.38l.125%202.74a.973.973%200%2000-.295.014l-2.382.59a5.986%205.986%200%2000-4.425%204.524.983.983%200%20001.919.43%204.032%204.032%200%20012.977-3.043l2.297-.57.103%202.262a6.304%206.304%200%2001-.9%203.548z'/%3e%3c/svg%3e"
+                alt=""
+              />
+            </span>
+            <h3 class="feature-title">Fully Customizable</h3>
+            <p class="feature-text">
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="bg-violet bg-[url('/src/assets/images/bg-boost-mobile.svg')] bg-cover bg-center py-20 text-center md:bg-[url('/src/assets/images/bg-boost-desktop.svg')] md:py-14 before-observer-up"
+      >
+        <h2 class="section-title text-white">Boost your links today</h2>
+        <a
+          href="#"
+          class="btn mt-6 inline-block rounded-full px-9 py-3.5 text-md demo-btn"
+          >Get Started</a
+        >
+      </section>
+    </main>
+
+    <footer id="resources" class="bg-midnight py-16">
+      <div
+        class="container-site flex flex-col items-center gap-10 text-center md:flex-row md:items-start md:justify-between md:text-left"
+      >
+        <a href="#" class="md:w-56">
+          <img
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='121'%20height='33'%3e%3cpath%20fill='%2334313D'%20d='M16.715%207.932c-.068-.09-.306-.26-.714-.51s-.918-.51-1.53-.782-1.281-.51-2.006-.714a8.005%208.005%200%2000-2.176-.306c-1.995%200-2.992.669-2.992%202.006%200%20.408.107.748.323%201.02.215.272.532.516.952.731.419.215.946.414%201.58.595l1.406.393.805.219c1.156.317%202.198.663%203.128%201.037.929.374%201.717.839%202.363%201.394a5.647%205.647%200%20011.496%202.023c.35.793.527%201.745.527%202.856%200%201.36-.255%202.51-.765%203.451-.51.94-1.185%201.7-2.023%202.278-.84.578-1.802.997-2.89%201.258-1.088.26-2.21.391-3.366.391a19.68%2019.68%200%2001-5.44-.799c-.884-.26-1.74-.572-2.567-.935A14.358%2014.358%200%2001.53%2022.28l2.448-4.862c.09.113.385.329.884.646.498.317%201.116.635%201.853.952.736.317%201.558.6%202.465.85.906.25%201.824.374%202.754.374%201.972%200%202.958-.6%202.958-1.802%200-.453-.148-.827-.442-1.122-.295-.295-.703-.561-1.224-.799a12.455%2012.455%200%2000-1.504-.56l-1.702-.495-.976-.288c-1.111-.34-2.074-.708-2.89-1.105-.816-.397-1.49-.856-2.023-1.377a5.003%205.003%200%2001-1.19-1.802c-.261-.68-.391-1.473-.391-2.38%200-1.27.238-2.391.714-3.366a7.266%207.266%200%20011.938-2.465%208.435%208.435%200%20012.839-1.513c1.076-.34%202.215-.51%203.417-.51.838%200%201.666.08%202.482.238.816.159%201.598.363%202.346.612.748.25%201.445.533%202.09.85.647.317%201.242.635%201.786.952l-2.448%204.624zM40.139%2025h-5.44V14.97c0-1.156-.227-2.006-.68-2.55-.454-.544-1.077-.816-1.87-.816-.318%200-.663.074-1.037.221a4.173%204.173%200%2000-1.088.646%205.827%205.827%200%2000-.97%201.003%204.4%204.4%200%2000-.68%201.292V25h-5.44V.18h5.44v9.962a6.786%206.786%200%20012.602-2.465c1.076-.578%202.26-.867%203.553-.867%201.201%200%202.17.21%202.907.629.736.42%201.303.952%201.7%201.598.396.646.663%201.371.799%202.176.136.805.204%201.592.204%202.363V25zm12.34.34c-1.519%200-2.873-.25-4.063-.748-1.19-.499-2.193-1.173-3.01-2.023a8.54%208.54%200%2001-1.852-2.958%209.97%209.97%200%2001-.63-3.519c0-1.224.21-2.397.63-3.519a8.54%208.54%200%20011.853-2.958c.816-.85%201.819-1.53%203.009-2.04s2.544-.765%204.063-.765c1.519%200%202.867.255%204.046.765%201.179.51%202.176%201.19%202.992%202.04a8.754%208.754%200%20011.87%202.958%209.736%209.736%200%2001.646%203.519%209.97%209.97%200%2001-.63%203.519%208.54%208.54%200%2001-1.852%202.958c-.816.85-1.82%201.524-3.01%202.023-1.19.499-2.543.748-4.062.748zM48.5%2016.092c0%201.405.374%202.533%201.122%203.383.748.85%201.7%201.275%202.856%201.275a3.59%203.59%200%20001.564-.34c.476-.227.89-.544%201.24-.952a4.57%204.57%200%2000.834-1.479%205.632%205.632%200%2000.306-1.887c0-1.405-.374-2.533-1.122-3.383-.748-.85-1.689-1.275-2.822-1.275a3.702%203.702%200%2000-2.84%201.292%204.57%204.57%200%2000-.832%201.479%205.632%205.632%200%2000-.306%201.887zm27.776-4.284c-1.315.023-2.505.238-3.57.646-1.065.408-1.836%201.02-2.312%201.836V25h-5.44V7.15h4.998v3.604c.612-1.201%201.4-2.142%202.363-2.822.963-.68%201.989-1.031%203.077-1.054h.544c.113%200%20.227.011.34.034v4.896zm14.074%2012.24a21.71%2021.71%200%2001-2.567.884c-.963.272-1.932.408-2.907.408-.68%200-1.32-.085-1.92-.255a4.286%204.286%200%2001-1.582-.816c-.453-.374-.81-.867-1.07-1.479-.262-.612-.392-1.349-.392-2.21v-9.316h-2.278V7.15h2.278V1.472h5.44V7.15h3.638v4.114h-3.638v7.446c0%20.59.147%201.014.442%201.275.295.26.669.391%201.122.391.408%200%20.827-.068%201.258-.204.43-.136.805-.283%201.122-.442l1.054%204.318zM92.627.18h5.44v18.462c0%201.36.578%202.04%201.734%202.04.272%200%20.572-.04.901-.119.329-.08.63-.198.901-.357l.714%204.08c-.68.317-1.462.567-2.346.748-.884.181-1.711.272-2.482.272-1.564%200-2.765-.408-3.604-1.224-.839-.816-1.258-1.995-1.258-3.536V.18zm11.456%2027.506c.454.159.879.272%201.275.34a6.4%206.4%200%20001.071.102c.658%200%201.168-.227%201.53-.68.363-.453.692-1.27.986-2.448l-6.8-17.85h5.61l4.148%2013.192%203.57-13.192h5.1l-6.8%2020.74a7.106%207.106%200%2001-2.55%203.587c-1.224.918-2.674%201.377-4.352%201.377a8.17%208.17%200%2001-1.377-.119%207.516%207.516%200%2001-1.41-.391v-4.658z'/%3e%3c/svg%3e"
+            alt="Shortly"
+            class="h-8 w-auto brightness-0 invert"
+          />
+        </a>
+
+        <div class="flex flex-col gap-10 md:flex-row md:gap-20">
+          <div>
+            <h3 class="footer-title">Features</h3>
+            <ul class="footer-list">
+              <li>
+                <a href="#" class="footer-link demo-btn">Link Shortening</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link demo-btn">Branded Links</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link demo-btn">Analytics</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Resources</h3>
+            <ul class="footer-list">
+              <li>
+                <a href="#" class="footer-link demo-btn">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link demo-btn">Developers</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link demo-btn">Support</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Company</h3>
+            <ul class="footer-list">
+              <li>
+                <a href="#" class="footer-link demo-btn">About</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link demo-btn">Our Team</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link demo-btn">Careers</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link demo-btn">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <a
+            href="#"
+            aria-label="Facebook"
+            class="social-icon mask-[url(/src/assets/images/icon-facebook.svg)] demo-btn"
+          ></a>
+          <a
+            href="#"
+            aria-label="Twitter"
+            class="social-icon mask-[url(/src/assets/images/icon-twitter.svg)] demo-btn"
+          ></a>
+          <a
+            href="#"
+            aria-label="Pinterest"
+            class="social-icon mask-[url(/src/assets/images/icon-pinterest.svg)] demo-btn"
+          ></a>
+          <a
+            href="#"
+            aria-label="Instagram"
+            class="social-icon mask-[url(/src/assets/images/icon-instagram.svg)] demo-btn"
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <dialog
+      id="mobile-menu"
+      popover
+      class="m-auto w-[calc(100%-3rem)] rounded-xl bg-violet p-6 text-white backdrop:bg-black/50 starting:open:opacity-0 starting:open:-translate-y-20 duration-500 opacity-0 -translate-y-20 open:opacity-100 open:translate-y-0 transition-discrete md:hidden"
+    >
+      <nav aria-label="Mobile Navigation" class="flex flex-col gap-4">
+        <ul
+          class="flex flex-col items-center gap-8 text-center text-md font-bold border-b pb-5 border-b-grayish-violet/30"
+        >
+          <li><a href="#features">Features</a></li>
+          <li class="demo-btn"><a href="#">Pricing</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+        <div
+          class="flex flex-col items-center gap-4 text-center text-md font-bold"
+        >
+          <a href="#" class="demo-btn">Login</a>
+          <a href="#" class="btn w-full rounded-full py-3 text-center demo-btn"
+            >Sign Up</a
+          >
+        </div>
+      </nav>
+    </dialog>
+    <ul
+      id="notifications-list"
+      class="fixed top-6 right-6 z-50 flex flex-col gap-3"
+      aria-live="polite"
+      aria-atomic="true"
+      aria-relevant="additions"
+    ></ul>
+    <dialog
+      id="fake-link-dialog"
+      popover
+      class="m-auto w-[calc(100%-3rem)] max-w-lg rounded-xl bg-white p-6 md:p-8 text-ink shadow-2xl backdrop:bg-black/50 starting:open:opacity-0 starting:open:-translate-y-30 duration-700 opacity-0 -translate-y-30 open:opacity-100 open:translate-y-0 transition-discrete"
+    >
+      <div class="flex flex-col gap-4 text-center">
+        <span
+          class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-cyan/20 text-cyan text-xl font-bold"
+        >
+          ℹ
+        </span>
+        <h2 class="text-xl md:text-2xl font-bold text-midnight">
+          Frontend Mentor Challenge Notice
+        </h2>
+        <p class="text-grayish-violet text-sm md:text-base leading-relaxed">
+          Please note that this is a <strong>fake-link</strong> presentation
+          showcasing a Frontend Mentor challenge. The URL shortening input is
+          fully interactive for UI/UX demonstration, but it does not connect to
+          a live persistent shortening database.
+        </p>
+        <div class="mt-4">
+          <button
+            type="button"
+            popovertarget="fake-link-dialog"
+            popovertargetaction="close"
+            class="btn rounded-full px-8 py-3 text-sm font-bold w-full md:w-auto cursor-pointer"
+          >
+            Got it, thanks!
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

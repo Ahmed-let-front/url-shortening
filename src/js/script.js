@@ -163,7 +163,7 @@ const copyToClipboard = async textToCopy => {
     await navigator.clipboard.writeText(textToCopy);
     showPopup('✔', 'Copied to clipboard!');
   } catch (err) {
-    showPopup('✖', 'Failed to copy text');
+    showPopup('✖', err.message);
   }
 };
 const handleCopyBtn = () => {

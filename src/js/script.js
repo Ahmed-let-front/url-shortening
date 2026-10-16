@@ -7,6 +7,7 @@ const elements = {
   originalLinkEl: document.getElementById('original-link'),
   shortenedLinksContainer: document.getElementById('shortened-links-container'),
   notificationsList: document.getElementById('notifications-list'),
+  copyBtn: document.getElementById('copyBtn'),
 };
 
 const config = {
@@ -47,7 +48,6 @@ const AJAX = async (apiUrl, longURL) => {
   const res = await Promise.race([fetchPro, timeout(config.TIMEOUT_SEC)]);
   if (!res.ok) throw new Error('Something Went Error');
   const data = await res.json();
-  console.log(data, res);
   return data;
 };
 const checkValidData = () => {
@@ -135,7 +135,26 @@ const handleShortenForm = async () => {
     }
   });
 };
+const copyToClipboard = async textToCopy => {
+  if (!textToCopy) {
+    showPopup('✖', 'No URL to copy!');
+    return;
+  }
+  try {
+
+    await navigator.clipboard.writeText(textToCopy);
+    showPopup('✔', 'Copied to clipboard!');
+  } catch (err) {
+    showPopup('✖', 'Failed to copy text');
+  }
+};
+const handleCopyBtn = () => {
+  elements.copyBtn.addEventListener('click', () =>
+    copyToClipboard(state.shortUrl),
+  );
+};
 const init = () => {
+  handleCopyBtn();
   handleShortenForm();
 };
 init();
